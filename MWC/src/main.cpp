@@ -186,7 +186,7 @@ int main(int argc, char* argv[])
                 if (new_fitness < fitness_minimum_winning_coalition)
                 {
                     // prints
-                    cout << endl;
+                    /*cout << endl;
                     cout << "Number of points within the limit:" << number_of_points << endl;
                     cout << "Previous fitness:" << fixed << fitness_minimum_winning_coalition << setprecision(9) << endl;
                     cout << "Recalculated fitness:" << fixed << new_fitness << setprecision(9) << endl;
@@ -201,7 +201,7 @@ int main(int argc, char* argv[])
                     {
                         cout << possible_winning_coalition[i] << ",";
                     }
-                    cout << endl;
+                    cout << endl;*/
                     // Save the improvement
                     improvement_vector.push_back(Possible_improvement());
                     // Save the fitness of the possible winning coalition
@@ -221,8 +221,8 @@ int main(int argc, char* argv[])
             if (improvement)
             {
                 // Prints the position to be changed
-                cout << "Worst of hull: " << i + 1 << endl;
-                cout << "Best of out: " << improvement_vector[0].index + 1 << endl;
+                //cout << "Worst of hull: " << i + 1 << endl;
+                //cout << "Best of out: " << improvement_vector[0].index + 1 << endl;
                 // A congressman from the convex hull is changed for one that is within the vector of possible improvement
                 coalition[hull[vector_distance_hull[i].hull_index].index] = distance_vector_minimum_winning_coalition[improvement_vector[0].index].position;
                 // Sort the coalition
